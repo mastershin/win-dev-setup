@@ -16,7 +16,10 @@ scoop install ripgrep bat fd fzf zoxide
 
 ```powershell
 # Developer tools, git, git hub CLI, node, go, rust and uv (uv for python as well), oh-my-posh terminal
-scoop install git gh uv nodejs oh-my-posh go rustup
+scoop install git gh uv nodejs oh-my-posh neovim go rustup
+
+# make sure to use ssh here
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 
 # if installing oh-my-posh terminal, font: MesloLGM Nerd Font
 oh-my-posh font install
