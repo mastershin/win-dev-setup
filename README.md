@@ -6,7 +6,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
 ```powershell
-scoop install sudo coreutils grep sed aws make vim 7zip
+scoop install sudo coreutils grep sed aws make vim 7zip ast-grep
 ```
 
 ```powershell
