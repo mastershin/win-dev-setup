@@ -10,8 +10,8 @@ scoop install sudo coreutils grep sed aws make vim 7zip ast-grep
 ```
 
 ```powershell
-# modern Rust-based CLI tools
-scoop install ripgrep bat fd fzf zoxide
+# modern CLI tools
+scoop install ripgrep bat fd fzf zoxide yazi chafa
 ```
 
 ```powershell
