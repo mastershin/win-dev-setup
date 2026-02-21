@@ -6,12 +6,12 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
 ```powershell
-scoop install sudo coreutils grep sed aws make vim 7zip ast-grep
+scoop install sudo coreutils grep sed aws make vim 7zip ffmpeg poppler
 ```
 
 ```powershell
 # modern CLI tools
-scoop install ripgrep bat fd fzf zoxide yazi chafa
+scoop install ripgrep bat fd fzf zoxide ast-grep yazi chafa
 ```
 
 ```powershell
