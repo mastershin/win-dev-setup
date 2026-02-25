@@ -32,9 +32,9 @@ oh-my-posh init pwsh | Invoke-Expression
 
 # Respond to up/down arrow in Terminal
 
-```powershell
-notepad $PROFILE
+`notepad $PROFILE`
 
+```powershell
 # Use Up/Down arrows to search history matching the current prefix
 Set-PSReadLineKeyHandler -Chord UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord DownArrow -Function HistorySearchForward
@@ -55,6 +55,7 @@ function lw { Get-ChildItem -Force @args | Format-Wide -AutoSize }
 #$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 #if (Test-Path($ChocolateyProfile)) { Import-Module "$ChocolateyProfile" }
 
+oh-my-posh init pwsh | Invoke-Expression
 ```
 
 ## self-signed on Admin Powershell
