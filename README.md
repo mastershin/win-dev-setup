@@ -73,6 +73,11 @@ Start-Service ssh-agent
 ### user's powershell
 
 ```powershell
+# add current key to agent
+ssh-add $HOME\.ssh\id_ed25519
+```
+
+```powershell
 Move-Item -Path "Cert:\CurrentUser\My\$($cert.Thumbprint)" -Destination "Cert:\CurrentUser\Root"
 
 # Copy the cert object to the Trusted Publishers store
