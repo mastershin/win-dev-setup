@@ -64,6 +64,12 @@ oh-my-posh init pwsh | Invoke-Expression
 $cert = New-SelfSignedCertificate -Type CodeSigningCert -Subject "CN=YourLocalSigner" -CertStoreLocation Cert:\CurrentUser\My
 ```
 
+## start ssh-agent
+```powershell
+Set-Service -Name ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+```
+
 ### user's powershell
 
 ```powershell
