@@ -6,6 +6,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
 ```powershell
+winget install isc.bin
 scoop install sudo coreutils grep sed aws make vim 7zip ffmpeg poppler
 ```
 
