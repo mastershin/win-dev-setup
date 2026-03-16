@@ -91,3 +91,6 @@ Set-ExecutionPolicy AllSigned -Scope CurrentUser
 
 Set-AuthenticodeSignature -FilePath $PROFILE -Certificate $cert
 ```
+
+## vnc client that supports VeNCrypt
+- `https://sourceforge.net/projects/tigervnc/`
