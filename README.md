@@ -94,3 +94,83 @@ Set-AuthenticodeSignature -FilePath $PROFILE -Certificate $cert
 
 ## vnc client that supports VeNCrypt
 - `https://sourceforge.net/projects/tigervnc/`
+- or use RoyalTS
+
+## AI agents
+```powershell
+# git
+winget install --id Git.Git -e --source winget
+
+# kilo code
+winget kilocode
+
+# claude via winget (manual auto update)
+winget install Anthropic.ClaudeCode
+
+# Google Gemini CLI
+npm install -g @google/gemini-cli
+
+# OpenAI Codex
+npm install -g @openai/codex
+
+# claude via powershell (auto update)
+irm https://claude.ai/install.ps1 | iex
+```
+
+# wezterm (%USERPROFILE%/.wezterm.lua)
+```lua
+local wezterm = require 'wezterm'
+local config = wezterm.config_builder()
+
+config.font = wezterm.font 'JetBrains Mono'
+config.font_size = 10.0
+
+config.color_scheme = 'Tokyo Night'
+config.window_background_opacity = 0.9
+
+config.keys = {
+    -- Map Alt + 1 through 9 to switch to tabs 0 through 8
+  { key = '1', mods = 'ALT', action = wezterm.action.ActivateTab(0) },
+  { key = '2', mods = 'ALT', action = wezterm.action.ActivateTab(1) },
+  { key = '3', mods = 'ALT', action = wezterm.action.ActivateTab(2) },
+  { key = '4', mods = 'ALT', action = wezterm.action.ActivateTab(3) },
+  { key = '5', mods = 'ALT', action = wezterm.action.ActivateTab(4) },
+  { key = '6', mods = 'ALT', action = wezterm.action.ActivateTab(5) },
+  { key = '7', mods = 'ALT', action = wezterm.action.ActivateTab(6) },
+  { key = '8', mods = 'ALT', action = wezterm.action.ActivateTab(7) },
+  { key = '9', mods = 'ALT', action = wezterm.action.ActivateTab(8) },
+  {
+    -- Ctrl + Shift + Enter: toggle zoom
+    key = 'Enter',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.TogglePaneZoomState,
+  },
+  {
+    -- Ctrl + Alt + Enter: toggle zoom
+    key = 'Enter',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.TogglePaneZoomState,
+  },
+  {
+    -- Ctrl + Shift + D: split vertical
+    key = 'D',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitVertical({ domain = 'CurrentPaneDomain' })
+  },
+  {
+    -- Ctrl + ]: move to next pane
+    key = ']',
+    mods = 'CTRL',
+    action = wezterm.action.ActivatePaneDirection('Next'),
+  },
+  {
+    -- Ctrl + [: move to previous pane
+    key = '[',
+    mods = 'CTRL',
+    action = wezterm.action.ActivatePaneDirection('Prev'),
+  },
+}
+
+return config
+```
+
