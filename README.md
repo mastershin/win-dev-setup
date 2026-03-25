@@ -107,14 +107,15 @@ winget kilocode
 # claude via winget (manual auto update)
 winget install Anthropic.ClaudeCode
 
+# - or - claude via powershell (auto update)
+irm https://claude.ai/install.ps1 | iex
+
 # Google Gemini CLI
 npm install -g @google/gemini-cli
 
 # OpenAI Codex
 npm install -g @openai/codex
 
-# claude via powershell (auto update)
-irm https://claude.ai/install.ps1 | iex
 ```
 
 # wezterm (%USERPROFILE%/.wezterm.lua)
