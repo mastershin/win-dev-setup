@@ -102,7 +102,8 @@ Set-AuthenticodeSignature -FilePath $PROFILE -Certificate $cert
 winget install --id Git.Git -e --source winget
 
 # kilo code
-winget kilocode
+# winget kilocode
+npm install -g @kilocode/cli
 
 # claude via winget (manual auto update)
 winget install Anthropic.ClaudeCode
